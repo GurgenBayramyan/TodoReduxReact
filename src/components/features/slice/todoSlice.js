@@ -30,7 +30,10 @@ const todoSlice = createSlice({
     onchangeEdite:(state,action) =>{
         const {index,value,name} = action.payload
         state.todo[index][name] = value
-       localStorage.setItem("todo",JSON.stringify(state.todo))
+       if(state.todo[index].isDisabled){
+        localStorage.setItem("todo",JSON.stringify(state.todo))
+       }
+
     },
     onChecked:(state,action)=>{
         

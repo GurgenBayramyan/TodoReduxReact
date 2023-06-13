@@ -45,7 +45,11 @@ const AddTodo = () => {
           />
           <input type="text" value={elem.deadline} disabled={elem.isDisabled}  onChange={(e)=>handleChange(index, "deadline", e.target.value)}/>
           <input type="checkbox"  checked={elem.isChecked}  onChange={()=>handleChecked(index)}/>
-          <button onClick={() => handleEdit(index)}> edit</button>
+          <button  class="btn btn-delete"  onClick={() => handleEdit(index)}>
+            <span class="mdi mdi-delete mdi-24px"></span>
+            <span class="mdi mdi-delete-empty mdi-24px"></span>
+            <span>{elem.isDisabled ? "Edite":"Change"}</span>
+          </button>
           <button  class="btn btn-delete"  onClick={()=>handleDelete(index)}>
             <span class="mdi mdi-delete mdi-24px"></span>
             <span class="mdi mdi-delete-empty mdi-24px"></span>
@@ -53,7 +57,7 @@ const AddTodo = () => {
           </button>
         </div>
       ))}
-      <button onClick={isCompleted}> filter</button>
+        <button class="super-button" onClick={isCompleted}>Filter  ToDo List</button>
     </div>
   );
 };

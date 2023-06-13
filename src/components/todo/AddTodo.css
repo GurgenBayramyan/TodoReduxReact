@@ -56,4 +56,35 @@
   .btn-delete:focus {
     box-shadow: 0 0 0 4px #ffcccc;
   }
-  
+  input[type="checkbox"] {
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+  }
+  input[type="checkbox"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+  }
+  .super-button{
+    width: 35%;
+    background: #40E0D0; 
+    color: #c72525; 
+    font-size: 10m;
+    padding: 0.5em 1em; 
+    text-shadow: 0.1em 0em 4.2px #90B6FF;
+    border-radius: 1.5em; 
+    border: solid 0.3em #24FF4D;
+    font-weight: 540;
+    cursor: pointer;
+    margin: 25px auto;
+    transition: all 500ms ease-in-out;
+   }
+  .super-button:hover{
+    background: #947BFF; 
+    transform: scale(1.2);
+    color: wheat;
+  }
